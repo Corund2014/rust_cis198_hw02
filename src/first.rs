@@ -1,6 +1,6 @@
 #[derive(Debug)]
-pub struct List {
-    head: Link,
+pub struct BST {
+    root: Link
 }
 
 #[derive(Debug)]
@@ -12,17 +12,14 @@ enum Link {
 #[derive(Debug)]
 struct Node {
     elem: i32,
-    next: Link,
+    right: Link,
+    left: Link,
 }
 
-impl List {
-    pub fn new() -> Self {
-        List{head:Link::Empty}
-        
-    }
-    pub fn push(&mut self, e:i32)
+impl BST {
+    fn new()->Self
     {
-        let n=Node{elem:e,next:Link::Empty};
-        self.head=Link::More(Box::new(n));
+        BST {root: Link::Empty}
     }
 }
+
